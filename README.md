@@ -5,11 +5,20 @@ local placeId = game.PlaceId
       New_World = true
   elseif placeId == 7449423635 then
       Three_World = true
-  end
+  elseif placeId == 4520749081 then
+         First_Sea = true
+      elseif placeId == 6381829480 then
+         Second_Sea = true
+      elseif placeId == 5931540094 then
+         Dungeon_Sea = true
+      end
+else
+    game.Players.LocalPlayer:Kick("สคริปต์ไม่ซัพพอร์ตค่ะ")
+end
 
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
     game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://9152775759";
+      Icon = "rbxassetid://9218723574";
       Title = "Kamua Hub", 
       Text = "Welcome Kamua hub!"
   })
@@ -17,7 +26,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
   wait(1)
   
   game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://9152775759";
+      Icon = "rbxassetid://9218723574";
       Title = "Kamua hub", 
       Text = "Loading Ui..."
   })
@@ -5352,7 +5361,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
   return DiscordLib
   elseif game.PlaceId == 4520749081 or game.PlaceId == 6381829480 or game.PlaceId == 5931540094 or game.PlaceId == 5931540094 then
     game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://9152775759";
+      Icon = "rbxassetid://9218723574";
       Title = "Kamua hub", 
       Text = "Welcome Kamua hub!"
   })
@@ -5360,7 +5369,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
   wait(1)
   
   game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://9152775759";
+      Icon = "rbxassetid://9218723574";
       Title = "Kamua hub", 
       Text = "Loading Ui..."
   })
