@@ -6756,7 +6756,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
           end)
       end
       --
-      local RenUi = library:AddWindow("Kamau Hub | King Legacy",Enum.KeyCode.RightControl)
+      local RenUi = library:AddWindow("Kamau Hub | Kg",Enum.KeyCode.RightControl)
       --
       local Main = RenUi:AddTab("Main","6026568198")
       local Stats = RenUi:AddTab("Stats","7040410130")
@@ -8290,6 +8290,3 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
               end
           end
       end)
-  else
-  game.Players.LocalPlayer:kick("No Support lol Eror Code 555+")
-  end
