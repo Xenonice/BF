@@ -2377,50 +2377,6 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
       game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
   end)
   
-  
-     local RigC = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework) 
-      local VirtualUser = game:GetService('VirtualUser')
-      local kkii = require(game.ReplicatedStorage.Util.CameraShaker)
-      spawn(function()
-          game:GetService('RunService').Heartbeat:connect(function()
-              if _G.FastAtttk then
-                  pcall(function()
-                      RigC.activeController.timeToNextAttack = 0
-                      RigC.activeController.attacking = false
-                      RigC.activeController.blocking = false
-                      RigC.activeController.timeToNextAttack = 0
-                      RigC.activeController.timeToNextBlock = 0
-                      RigC.activeController.increment = 3
-                      RigC.activeController.hitboxMagnitude = 100
-                      game.Players.LocalPlayer.Character.Stun.Value = 0
-                      game.Players.LocalPlayer.Character.Humanoid.Sit = false
-  
-                      VirtualUser:CaptureController()
-                      VirtualUser:Button1Down(Vector2.new(1280, 672))
-                      kkii:Stop()
-                  end)
-              end
-          end)
-      end)
-  spawn(function()
-          for i = 1,math,9999999999999999999999999999999999999999999999999999 do game:GetService('RunService').Heartbeat:wait()
-              if _G.FastAtttk then
-              VirtualUser:CaptureController()
-              VirtualUser:Button1Down(Vector2.new(1280, 672))
-          end
-      end
-  end)
-  
-  if _G.FastAtttk == false then
-      _G.FastAtttk = false
-  else
-      _G.FastAtttk = true
-  end
-  
-      set:AddToggle("Fast Attack", _G.FastAtttk,function(vu)
-      _G.FastAtttk = vu
-  end)
-  
   set:AddLabel("Auto Skill")
       set:AddToggle("[Z]",true,function(vu)
       SkillZ = vu
@@ -8283,10 +8239,12 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
           while wait() do 
               if _G.LockLevel then
                   pcall(function()
-                      if game.Players.LocalPlayer.PlayerStats.lvl.Value >= tonumber(_G.LockAt) then
+                      if game.Players.LocalPlayer.PlayerStats.lvl.Value.tonumber
+                          (_G.LockAt) then
                           game.Players.LocalPlayer:Kick("\nSuccessfully Farm!")
-                      end
-                  end)
-              end
-          end
-      end)
+                        end
+                    end)
+                end
+            end
+        end)
+    end
